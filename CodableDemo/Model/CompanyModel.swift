@@ -76,3 +76,19 @@ struct Name : Codable {
     }
 
 }
+
+extension Array where Element == CompanyModel {
+    
+    mutating func sortAssendingOrder() -> [CompanyModel] {
+        return self.sorted {
+            $0.name! < $1.name!
+        }
+    }
+    
+    mutating func sortDeAssendingOrder() -> [CompanyModel] {
+        return self.sorted {
+            $0.name! > $1.name!
+        }
+    }
+    
+}

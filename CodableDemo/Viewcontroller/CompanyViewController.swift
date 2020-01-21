@@ -9,7 +9,7 @@
 import UIKit
 import Foundation
 
-class CompanyViewController: UIViewController {
+class CompanyViewController: AbstractViewController {
     
     //MARK:- IBOutlet
     
@@ -19,6 +19,12 @@ class CompanyViewController: UIViewController {
     //MARK:- Properties
     
     var viewModel = CompanyViewModel()
+    var isAssedingOrder: Bool = false {
+        didSet {
+            sortByOrder(order: isAssedingOrder)
+            self.tableView.reloadData()
+        }
+    }
     
     //MARK:- View Life Cycle
     
@@ -32,6 +38,9 @@ class CompanyViewController: UIViewController {
         configureUI()
     }
     
+    @objc override func rightBarButtonClicked() {
+        self.isAssedingOrder.toggle()
+    }
     
 }
 
@@ -41,11 +50,23 @@ extension CompanyViewController {
     func loadMemberViews(using data: [Members]) {
         
         let detailView = AppStoryboard.main.instantiateVC(viewControllerClass: CompanyMemberViewController.self)
-             
-             detailView.viewModel.memberList = data
-             
-             self.navigationController?.pushViewController(detailView, animated: true)
+        
+        detailView.viewModel.memberList = data
+        
+        self.navigationController?.pushViewController(detailView, animated: true)
     }
+    
+    func sortByOrder(order isAssending : Bool) {
+        
+        if isAssending {
+            self.viewModel.searchedCompanies = self.viewModel.companyList.sortAssendingOrder()
+            
+        } else {
+            self.viewModel.searchedCompanies = self.viewModel.companyList.sortDeAssendingOrder()
+            
+        }
+    }
+    
 }
 
 //MARK:- WebServies
@@ -66,6 +87,7 @@ extension CompanyViewController {
     @objc func viewMemberButtonClicked(_ button : UIButton) {
         loadMemberViews(using: self.viewModel.searchedCompanies[button.tag].members ?? [])
     }
+    
 }
 
 //MARK:- WebServies

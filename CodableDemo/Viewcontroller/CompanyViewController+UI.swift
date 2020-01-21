@@ -25,7 +25,7 @@ extension CompanyViewController {
     
     func configureNavigationBar() {
         self.navigationController?.navigationBar.topItem?.title = "Companies"
-
+        addRightBarButtonWithImageAbstract(#imageLiteral(resourceName: "member"))
     }
     
     func setupTableview() {
