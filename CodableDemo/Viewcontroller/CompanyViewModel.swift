@@ -12,8 +12,4 @@ class CompanyViewModel: NSObject {
     
     var companyList = [CompanyModel]()
     var searchedCompanies: [CompanyModel] = [CompanyModel]()
-
-    var year: String {
-        return ""
-    }
 }
