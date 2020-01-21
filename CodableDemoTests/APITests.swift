@@ -26,13 +26,13 @@ extension APITests {
     
     func testMovieListAPI() {
         
-        let viewModel = MovieViewModel()
+        let viewModel = CompanyViewModel()
         
         let expectation = self.expectation(description: "Test Movie API")
         
-        MovieProxy.movieList(APIConfiguration(), successCompletion: { (result) in
+        CompanyProxy.companyList(APIConfiguration(), successCompletion: { (result) in
             
-            viewModel.movies = result.movie ?? []
+            viewModel.companyList = result
             
             expectation.fulfill()
 
@@ -42,9 +42,9 @@ extension APITests {
         
         waitForExpectations(timeout: 30) { (error) in
             
-            XCTAssertNotNil(viewModel.movies)
+            XCTAssertNotNil(viewModel.companyList)
             
-            XCTAssertEqual(viewModel.movies.first?.type, "movie")
+            XCTAssertEqual(viewModel.companyList.first?.name, "GYNKO")
         }
     }
 }
