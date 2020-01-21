@@ -35,6 +35,22 @@ class CompanyViewController: UIViewController {
     
 }
 
+//MARK:- WebServies
+
+extension CompanyViewController {
+    
+    @objc func followButtonClicked(_ button : UIButton) {
+        
+    }
+    
+    @objc func favoriteButtonClicked(_ button : UIButton) {
+        
+    }
+    
+    @objc func viewMemberButtonClicked(_ button : UIButton) {
+        
+    }
+}
 
 //MARK:- WebServies
 

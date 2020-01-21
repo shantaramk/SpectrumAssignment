@@ -24,6 +24,18 @@ extension CompanyViewController: UITableViewDelegate, UITableViewDataSource {
         
         cell.company = self.viewModel.searchedCompanies[indexPath.row]
         
+        cell.followButton.tag = indexPath.row
+        
+        cell.favoriteButton.tag = indexPath.row
+        
+        cell.followButton.tag = indexPath.row
+        
+        cell.memberButton.addTarget(self, action: #selector(followButtonClicked(_:)), for: .touchUpInside)
+        
+        cell.favoriteButton.addTarget(self, action: #selector(favoriteButtonClicked(_:)), for: .touchUpInside)
+        
+        cell.memberButton.addTarget(self, action: #selector(viewMemberButtonClicked(_:)), for: .touchUpInside)
+        
         return cell
     }
     
