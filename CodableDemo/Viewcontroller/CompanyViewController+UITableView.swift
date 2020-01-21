@@ -39,17 +39,6 @@ extension CompanyViewController: UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-        let detailView = AppStoryboard.main.instantiateVC(viewControllerClass: CompanyMemberViewController.self)
-        
-        detailView.viewModel.memberList = self.viewModel.searchedCompanies[indexPath.row].members ?? []
-        
-        self.navigationController?.pushViewController(detailView, animated: true)
-        
-    }
-    
-    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableView.automaticDimension
 

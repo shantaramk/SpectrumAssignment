@@ -35,6 +35,18 @@ class CompanyViewController: UIViewController {
     
 }
 
+
+extension CompanyViewController {
+    
+    func loadMemberViews(using data: [Members]) {
+        
+        let detailView = AppStoryboard.main.instantiateVC(viewControllerClass: CompanyMemberViewController.self)
+             
+             detailView.viewModel.memberList = data
+             
+             self.navigationController?.pushViewController(detailView, animated: true)
+    }
+}
 //MARK:- WebServies
 
 extension CompanyViewController {
@@ -48,7 +60,7 @@ extension CompanyViewController {
     }
     
     @objc func viewMemberButtonClicked(_ button : UIButton) {
-        
+        loadMemberViews(using: self.viewModel.searchedCompanies[button.tag].members ?? [])
     }
 }
 

@@ -107,22 +107,22 @@
                                 </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="jv4-jn-JEJ">
-                                <rect key="frame" x="85" y="10" width="305" height="129"/>
+                                <rect key="frame" x="85" y="12" width="305" height="127"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CRN12345689" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TQB-nW-UBe">
-                                        <rect key="frame" x="0.0" y="0.0" width="112" height="20"/>
-                                        <fontDescription key="fontDescription" name="ElMessiri-Regular" family="El Messiri" pointSize="17"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="105.5" height="19"/>
+                                        <fontDescription key="fontDescription" name="ElMessiri-Regular" family="El Messiri" pointSize="16"/>
                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="03 Jan 2019, 11:10 PM" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BRR-8c-zQr">
-                                        <rect key="frame" x="0.0" y="28" width="155.5" height="17.5"/>
+                                        <rect key="frame" x="0.0" y="27" width="155.5" height="17.5"/>
                                         <fontDescription key="fontDescription" name="ElMessiri-Regular" family="El Messiri" pointSize="15"/>
                                         <color key="textColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Package (Medicine, +1)" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bYr-ja-bGc">
-                                        <rect key="frame" x="0.0" y="53.5" width="157.5" height="75.5"/>
+                                        <rect key="frame" x="0.0" y="52.5" width="157.5" height="74.5"/>
                                         <fontDescription key="fontDescription" name="ElMessiri-Regular" family="El Messiri" pointSize="15"/>
                                         <color key="textColor" red="0.23921568630000001" green="0.23921568630000001" blue="0.23921568630000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -130,7 +130,7 @@
                                 </subviews>
                             </stackView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="square.and.arrow.up" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Qws-AJ-dbB" customClass="ImageLoader" customModule="CodableDemo" customModuleProvider="target">
-                                <rect key="frame" x="10" y="7.5" width="65" height="66.5"/>
+                                <rect key="frame" x="10" y="9.5" width="65" height="66.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="65" id="qg1-0w-5hm"/>
@@ -148,7 +148,7 @@
                             <constraint firstItem="jv4-jn-JEJ" firstAttribute="top" secondItem="Qws-AJ-dbB" secondAttribute="top" id="1nf-0I-F7G"/>
                             <constraint firstItem="Qws-AJ-dbB" firstAttribute="leading" secondItem="Emh-Ih-YwL" secondAttribute="leading" constant="10" id="6ec-LG-xO3"/>
                             <constraint firstItem="jv4-jn-JEJ" firstAttribute="leading" secondItem="Qws-AJ-dbB" secondAttribute="trailing" constant="10" id="8SM-Gg-oIt"/>
-                            <constraint firstItem="Qws-AJ-dbB" firstAttribute="top" secondItem="Emh-Ih-YwL" secondAttribute="top" constant="10" id="CFS-YN-leU"/>
+                            <constraint firstItem="Qws-AJ-dbB" firstAttribute="top" secondItem="Emh-Ih-YwL" secondAttribute="top" constant="12" id="CFS-YN-leU"/>
                             <constraint firstItem="Qws-AJ-dbB" firstAttribute="width" secondItem="Qws-AJ-dbB" secondAttribute="height" multiplier="1:1" id="EMY-pw-tnk"/>
                             <constraint firstAttribute="bottom" secondItem="I0z-ne-hRp" secondAttribute="bottom" id="FdC-nD-AKw"/>
                             <constraint firstItem="I2R-NY-p2z" firstAttribute="top" secondItem="jv4-jn-JEJ" secondAttribute="bottom" constant="10" id="J2L-M6-zbs"/>
