@@ -36,10 +36,17 @@ class CompanyViewController: AbstractViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         configureUI()
+        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        self.navigationController?.navigationBar.topItem?.title = "Companies"
+        
     }
     
     @objc override func rightBarButtonClicked() {
         self.isAssedingOrder.toggle()
+        addRightBarButtonWithImageAbstract(self.isAssedingOrder ? #imageLiteral(resourceName: "deassendind1") : #imageLiteral(resourceName: "assendind1"))
     }
     
 }

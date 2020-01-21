@@ -25,5 +25,26 @@ class AbstractViewController: UIViewController {
     @objc func rightBarButtonClicked() {
        }
     
+    
+       func addLeftNavigationBarBackButtonWithImage() {
+           
+           let leftNavigationBarItem = UIBarButtonItem(image: #imageLiteral(resourceName: "back"),
+                                                       style: .plain,
+                                                       target: self,
+                                                       action: #selector(leftNavigationBarButtonClicked(_:)))
+           self.navigationItem.leftBarButtonItem = leftNavigationBarItem
+       }
+    
+    @objc func leftNavigationBarButtonClicked(_ sender: AnyObject) {
+           /* do something with left navigation button action */
+           self.navigationController?.popViewController(animated: true)
+       }
+    
+    func setNavigationBarTitle(_ titleText: String) {
+        let navigationBar: UINavigationBar! =  self.navigationController?.navigationBar
+        navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.black, NSAttributedString.Key.font: UIFont.systemFont(ofSize: 18.0)]
+        self.title = titleText
+        self.navigationController?.navigationBar.isHidden = false
+    }
 
 }

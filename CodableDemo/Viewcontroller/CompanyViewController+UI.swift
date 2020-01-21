@@ -24,8 +24,9 @@ extension CompanyViewController {
     }
     
     func configureNavigationBar() {
-        self.navigationController?.navigationBar.topItem?.title = "Companies"
-        addRightBarButtonWithImageAbstract(#imageLiteral(resourceName: "member"))
+        setNavigationBarTitle("Companies")
+
+        addRightBarButtonWithImageAbstract(#imageLiteral(resourceName: "assendind1"))
     }
     
     func setupTableview() {
@@ -36,7 +37,6 @@ extension CompanyViewController {
         self.tableView.separatorColor = .gray
         self.tableView.estimatedRowHeight = 150
         self.tableView.rowHeight = UITableView.automaticDimension
-        
     }
     
     

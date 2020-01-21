@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CompanyMemberViewController: UIViewController {
+class CompanyMemberViewController: AbstractViewController {
     
     
     //MARK:- IBOutlet
@@ -19,7 +19,13 @@ class CompanyMemberViewController: UIViewController {
     //MARK:- Properties
     
     var viewModel = MemberViewModel()
-
+    var isAssedingOrder: Bool = false {
+           didSet {
+               sortByOrder(order: isAssedingOrder)
+               self.tableView.reloadData()
+           }
+       }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -30,9 +36,32 @@ class CompanyMemberViewController: UIViewController {
     }
                  
     override func viewWillAppear(_ animated: Bool) {
-        self.navigationController?.navigationBar.topItem?.title = "Member List"
+        setNavigationBarTitle("Member List")
     }
 
+    @objc override func rightBarButtonClicked() {
+           self.isAssedingOrder.toggle()
+           addRightBarButtonWithImageAbstract(self.isAssedingOrder ? #imageLiteral(resourceName: "deassendind1") : #imageLiteral(resourceName: "assendind1"))
+       }
+    
+    func sortByOrder(order isAssending : Bool) {
+        
+        if isAssending {           
+            self.viewModel.searchedmembers = self.viewModel.memberList.sorted { first, second in
+                let firstName = first.name?.first ?? ""
+                let secondName = second.name?.first ?? ""
+                return firstName < secondName
+             }
+
+        } else {
+          self.viewModel.searchedmembers = self.viewModel.memberList.sorted { first, second in
+             let firstName = first.name?.first ?? ""
+             let secondName = second.name?.first ?? ""
+             return firstName > secondName
+          }
+        }
+    }
+    
 }
 
 enum AppStoryboard: String {
