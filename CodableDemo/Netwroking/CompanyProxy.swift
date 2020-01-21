@@ -8,9 +8,9 @@
 
 import UIKit
 
-class MovieProxy: APIClient {
+class CompanyProxy: APIClient {
     
-    static func movieList(_ apiConfiguration: APIConfiguration, successCompletion: @escaping (MovieBaseModel) -> Void, failureCompletion: @escaping (Error) -> Void) {
+    static func companyList(_ apiConfiguration: APIConfiguration, successCompletion: @escaping ([CompanyModel]) -> Void, failureCompletion: @escaping (Error) -> Void) {
         
         performRequest(route: apiConfiguration, successCompletion: { (result) in
             

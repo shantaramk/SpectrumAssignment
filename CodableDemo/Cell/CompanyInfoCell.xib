@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="ElMessiri-Bold.ttf">
+            <string>ElMessiri-Bold</string>
+        </array>
+        <array key="ElMessiri-Regular.ttf">
+            <string>ElMessiri-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CompanyInfoCell" rowHeight="229" id="h1a-op-rhI" customClass="CompanyInfoCell" customModule="CodableDemo">
+            <rect key="frame" x="0.0" y="0.0" width="400" height="229"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="h1a-op-rhI" id="j9b-v8-gAg">
+                <rect key="frame" x="0.0" y="0.0" width="400" height="229"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Emh-Ih-YwL">
+                        <rect key="frame" x="0.0" y="4" width="400" height="219"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I0z-ne-hRp" userLabel="BottomButtonView">
+                                <rect key="frame" x="0.0" y="172" width="400" height="47"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="I2R-NY-p2z">
+                                        <rect key="frame" x="0.0" y="0.0" width="400" height="47"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gyg-Ra-To9" customClass="MIButton" customModule="MIXDesignable">
+                                                <rect key="frame" x="0.0" y="0.0" width="133.5" height="47"/>
+                                                <fontDescription key="fontDescription" name="ElMessiri-Bold" family="El Messiri" pointSize="14"/>
+                                                <state key="normal" title="Follow">
+                                                    <color key="titleColor" red="0.1176470588" green="0.1215686275" blue="0.12941176469999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" red="0.92156862750000001" green="0.92156862750000001" blue="0.92156862750000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="updateBookingButtonTapped:" destination="h1a-op-rhI" eventType="touchUpInside" id="G7h-8X-idT"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cbd-sV-kgf" customClass="MIButton" customModule="MIXDesignable">
+                                                <rect key="frame" x="133.5" y="0.0" width="133" height="47"/>
+                                                <fontDescription key="fontDescription" name="ElMessiri-Bold" family="El Messiri" pointSize="14"/>
+                                                <state key="normal" title="Set Favorite">
+                                                    <color key="titleColor" red="0.1176470588" green="0.1215686275" blue="0.12941176469999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" red="0.92156862750000001" green="0.92156862750000001" blue="0.92156862750000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="trackButtonClicked:" destination="h1a-op-rhI" eventType="touchUpInside" id="0pP-np-jRg"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3qG-ZL-qnl" customClass="MIButton" customModule="MIXDesignable">
+                                                <rect key="frame" x="266.5" y="0.0" width="133.5" height="47"/>
+                                                <fontDescription key="fontDescription" name="ElMessiri-Bold" family="El Messiri" pointSize="14"/>
+                                                <state key="normal" title="View Members">
+                                                    <color key="titleColor" red="0.1176470588" green="0.1215686275" blue="0.12941176469999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" red="0.92156862750000001" green="0.92156862750000001" blue="0.92156862750000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="viewDetailsButtonClicked:" destination="h1a-op-rhI" eventType="touchUpInside" id="eTQ-Es-TVs"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="Cbd-sV-kgf" firstAttribute="top" secondItem="I2R-NY-p2z" secondAttribute="top" id="072-Rk-bdS"/>
+                                            <constraint firstItem="Gyg-Ra-To9" firstAttribute="width" secondItem="3qG-ZL-qnl" secondAttribute="width" id="IHX-7J-or5"/>
+                                            <constraint firstAttribute="bottom" secondItem="3qG-ZL-qnl" secondAttribute="bottom" id="LNV-et-j2W"/>
+                                            <constraint firstItem="3qG-ZL-qnl" firstAttribute="top" secondItem="I2R-NY-p2z" secondAttribute="top" id="PLV-5h-cQV"/>
+                                            <constraint firstItem="Gyg-Ra-To9" firstAttribute="top" secondItem="I2R-NY-p2z" secondAttribute="top" id="TAe-Ai-974"/>
+                                            <constraint firstItem="Gyg-Ra-To9" firstAttribute="leading" secondItem="I2R-NY-p2z" secondAttribute="leading" id="b8A-Ce-7KS"/>
+                                            <constraint firstAttribute="bottom" secondItem="Cbd-sV-kgf" secondAttribute="bottom" id="h4E-1I-wTt"/>
+                                            <constraint firstItem="3qG-ZL-qnl" firstAttribute="width" secondItem="Cbd-sV-kgf" secondAttribute="width" id="ljg-AQ-lYf"/>
+                                            <constraint firstAttribute="bottom" secondItem="Gyg-Ra-To9" secondAttribute="bottom" id="pvc-bl-taz"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="I2R-NY-p2z" secondAttribute="bottom" id="Eln-1G-Prm"/>
+                                    <constraint firstAttribute="trailing" secondItem="I2R-NY-p2z" secondAttribute="trailing" id="EyQ-jF-0Gp"/>
+                                    <constraint firstAttribute="height" constant="47" id="bzX-CW-6Pt"/>
+                                    <constraint firstItem="I2R-NY-p2z" firstAttribute="leading" secondItem="I0z-ne-hRp" secondAttribute="leading" id="kub-uo-NSQ"/>
+                                    <constraint firstItem="I2R-NY-p2z" firstAttribute="top" secondItem="I0z-ne-hRp" secondAttribute="top" id="ofI-Mo-t1H"/>
+                                </constraints>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="jv4-jn-JEJ">
+                                <rect key="frame" x="85" y="10" width="305" height="152"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CRN12345689" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TQB-nW-UBe">
+                                        <rect key="frame" x="0.0" y="0.0" width="102.5" height="27"/>
+                                        <fontDescription key="fontDescription" name="ElMessiri-Regular" family="El Messiri" pointSize="17"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="03 Jan 2019, 11:10 PM" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BRR-8c-zQr">
+                                        <rect key="frame" x="0.0" y="35" width="131" height="23.5"/>
+                                        <fontDescription key="fontDescription" name="ElMessiri-Regular" family="El Messiri" pointSize="15"/>
+                                        <color key="textColor" red="0.23921568630000001" green="0.23921568630000001" blue="0.23921568630000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="03 Jan 2019, 11:10 PM" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n4v-L2-qeg">
+                                        <rect key="frame" x="0.0" y="66.5" width="131" height="23.5"/>
+                                        <fontDescription key="fontDescription" name="ElMessiri-Regular" family="El Messiri" pointSize="15"/>
+                                        <color key="textColor" red="0.23921568630000001" green="0.23921568630000001" blue="0.23921568630000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Package (Medicine, +1)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bYr-ja-bGc">
+                                        <rect key="frame" x="0.0" y="98" width="142.5" height="54"/>
+                                        <fontDescription key="fontDescription" name="ElMessiri-Regular" family="El Messiri" pointSize="15"/>
+                                        <color key="textColor" red="0.23921568630000001" green="0.23921568630000001" blue="0.23921568630000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="square.and.arrow.up" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Qws-AJ-dbB" customClass="ImageLoader" customModule="CodableDemo" customModuleProvider="target">
+                                <rect key="frame" x="10" y="7.5" width="65" height="66.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="65" id="qg1-0w-5hm"/>
+                                    <constraint firstAttribute="width" secondItem="Qws-AJ-dbB" secondAttribute="height" multiplier="1:1" id="sGL-fm-mfW"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="sGL-fm-mfW"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="jv4-jn-JEJ" firstAttribute="top" secondItem="Qws-AJ-dbB" secondAttribute="top" id="1nf-0I-F7G"/>
+                            <constraint firstItem="Qws-AJ-dbB" firstAttribute="leading" secondItem="Emh-Ih-YwL" secondAttribute="leading" constant="10" id="6ec-LG-xO3"/>
+                            <constraint firstItem="jv4-jn-JEJ" firstAttribute="leading" secondItem="Qws-AJ-dbB" secondAttribute="trailing" constant="10" id="8SM-Gg-oIt"/>
+                            <constraint firstItem="Qws-AJ-dbB" firstAttribute="top" secondItem="Emh-Ih-YwL" secondAttribute="top" constant="10" id="CFS-YN-leU"/>
+                            <constraint firstItem="Qws-AJ-dbB" firstAttribute="width" secondItem="Qws-AJ-dbB" secondAttribute="height" multiplier="1:1" id="EMY-pw-tnk"/>
+                            <constraint firstAttribute="bottom" secondItem="I0z-ne-hRp" secondAttribute="bottom" id="FdC-nD-AKw"/>
+                            <constraint firstItem="I2R-NY-p2z" firstAttribute="top" secondItem="jv4-jn-JEJ" secondAttribute="bottom" constant="10" id="J2L-M6-zbs"/>
+                            <constraint firstAttribute="trailing" secondItem="jv4-jn-JEJ" secondAttribute="trailing" constant="10" id="PMO-JH-1vc"/>
+                            <constraint firstItem="I0z-ne-hRp" firstAttribute="leading" secondItem="Emh-Ih-YwL" secondAttribute="leading" id="TKe-vb-hiO"/>
+                            <constraint firstAttribute="trailing" secondItem="I0z-ne-hRp" secondAttribute="trailing" id="mkY-rl-xhH"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="Emh-Ih-YwL" secondAttribute="trailing" id="CMC-vV-4bi"/>
+                    <constraint firstItem="Emh-Ih-YwL" firstAttribute="top" secondItem="j9b-v8-gAg" secondAttribute="top" constant="4" id="FX9-sp-BhW"/>
+                    <constraint firstAttribute="bottom" secondItem="Emh-Ih-YwL" secondAttribute="bottom" constant="6" id="pWz-4W-pKP"/>
+                    <constraint firstItem="Emh-Ih-YwL" firstAttribute="leading" secondItem="j9b-v8-gAg" secondAttribute="leading" id="wDw-iJ-fws"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="lBJ-SC-T53"/>
+            <connections>
+                <outlet property="dateAndTimeLabel" destination="BRR-8c-zQr" id="Z6y-oB-1BF"/>
+                <outlet property="orderIDLabel" destination="TQB-nW-UBe" id="Ty6-Xz-yC4"/>
+                <outlet property="packageTypeLabel" destination="bYr-ja-bGc" id="360-sH-0N7"/>
+                <outlet property="trackButton" destination="Cbd-sV-kgf" id="DUT-AW-I8z"/>
+                <outlet property="updateBookingButton" destination="Gyg-Ra-To9" id="vwS-pJ-WN0"/>
+                <outlet property="viewDetailsButton" destination="3qG-ZL-qnl" id="GHm-Xf-ljK"/>
+            </connections>
+            <point key="canvasLocation" x="126.08695652173914" y="165.06696428571428"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="square.and.arrow.up" catalog="system" width="56" height="64"/>
+    </resources>
+</document>

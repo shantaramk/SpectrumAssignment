@@ -8,10 +8,11 @@
 
 import UIKit
 
-class MovieViewModel: NSObject {
+class CompanyViewModel: NSObject {
     
-    var movies = [Movie]()
-    
+    var companyList = [CompanyModel]()
+    var searchedCompanies: [CompanyModel] = [CompanyModel]()
+
     var year: String {
         return ""
     }

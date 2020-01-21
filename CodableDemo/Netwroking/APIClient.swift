@@ -53,6 +53,6 @@ class APIConfiguration {
     
      var path: String {
         
-        return "http://www.omdbapi.com/?s=Batman&page=1&apikey=eeefc96f"
+        return "https://next.json-generator.com/api/json/get/Vk-LhK44U"
     }
 }
