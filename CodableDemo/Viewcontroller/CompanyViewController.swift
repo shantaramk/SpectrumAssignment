@@ -47,16 +47,20 @@ extension CompanyViewController {
              self.navigationController?.pushViewController(detailView, animated: true)
     }
 }
+
 //MARK:- WebServies
 
 extension CompanyViewController {
     
     @objc func followButtonClicked(_ button : UIButton) {
         
+        self.viewModel.searchedCompanies[button.tag].isfollwing.toggle()
+        self.tableView.reloadRows(at: [IndexPath.init(row: button.tag, section: 0)], with: .automatic)
     }
     
     @objc func favoriteButtonClicked(_ button : UIButton) {
-        
+        self.viewModel.searchedCompanies[button.tag].isfavorite.toggle()
+        self.tableView.reloadRows(at: [IndexPath.init(row: button.tag, section: 0)], with: .automatic)
     }
     
     @objc func viewMemberButtonClicked(_ button : UIButton) {

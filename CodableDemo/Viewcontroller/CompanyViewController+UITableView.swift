@@ -28,9 +28,9 @@ extension CompanyViewController: UITableViewDelegate, UITableViewDataSource {
         
         cell.favoriteButton.tag = indexPath.row
         
-        cell.followButton.tag = indexPath.row
+        cell.memberButton.tag = indexPath.row
         
-        cell.memberButton.addTarget(self, action: #selector(followButtonClicked(_:)), for: .touchUpInside)
+        cell.followButton.addTarget(self, action: #selector(followButtonClicked(_:)), for: .touchUpInside)
         
         cell.favoriteButton.addTarget(self, action: #selector(favoriteButtonClicked(_:)), for: .touchUpInside)
         

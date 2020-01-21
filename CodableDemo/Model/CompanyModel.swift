@@ -1,11 +1,13 @@
 
 import Foundation
-struct CompanyModel : Codable {
+class CompanyModel : Codable {
     let _id : String?
     let name : String?
     let website : String?
     let logo : String?
     let about : String?
+    var isfavorite : Bool = false
+    var isfollwing : Bool = false
     let members : [Members]?
 
     enum CodingKeys: String, CodingKey {
@@ -18,7 +20,7 @@ struct CompanyModel : Codable {
         case members = "members"
     }
 
-    init(from decoder: Decoder) throws {
+   required init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
         _id = try values.decodeIfPresent(String.self, forKey: ._id)
         name = try values.decodeIfPresent(String.self, forKey: .name)
@@ -30,7 +32,7 @@ struct CompanyModel : Codable {
 
 }
 
-struct Members : Codable {
+class Members : Codable {
     let _id : String?
     let age : Int?
     let name : Name?
@@ -46,7 +48,7 @@ struct Members : Codable {
         case phone = "phone"
     }
 
-    init(from decoder: Decoder) throws {
+    required init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
         _id = try values.decodeIfPresent(String.self, forKey: ._id)
         age = try values.decodeIfPresent(Int.self, forKey: .age)

@@ -51,6 +51,15 @@ class CompanyInfoCell: UITableViewCell {
 
              self.descriptionLabel.text = company.about ?? ""
 
+            self.favoriteButton.setTitleColor(company.isfavorite ? UIColor.green : UIColor.black , for: .normal)
+            self.favoriteButton.setTitle(company.isfavorite ? "Remove favourite" : "Set favourite" , for: .normal)
+
+            
+            self.followButton.setTitleColor(company.isfollwing ? UIColor.blue : UIColor.black , for: .normal)
+                      self.followButton.setTitle(company.isfollwing ? "unFollow" : "Follow" , for: .normal)
+            
+            
+            
          }
          
      }
