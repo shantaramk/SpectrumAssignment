@@ -13,4 +13,23 @@ class MemberViewModel: NSObject {
     var memberList = [Members]()
     var searchedmembers: [Members] = [Members]()
   
+    var actionList: [(SortOption, UIAlertAction.Style)] {
+          
+          get {
+              var actions: [(SortOption, UIAlertAction.Style)] = []
+              
+              actions.append((.nameAscending, UIAlertAction.Style.default))
+              
+              actions.append((.nameDescending, UIAlertAction.Style.default))
+              
+              actions.append((.ageAscending, UIAlertAction.Style.default))
+              
+              actions.append((.ageDescending, UIAlertAction.Style.default))
+              
+              return actions
+          }
+          
+          
+      }
+    
 }

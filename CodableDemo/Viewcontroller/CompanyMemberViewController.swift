@@ -19,13 +19,8 @@ class CompanyMemberViewController: AbstractViewController {
     //MARK:- Properties
     
     var viewModel = MemberViewModel()
-    var isAssedingOrder: Bool = false {
-           didSet {
-               sortByOrder(order: isAssedingOrder)
-               self.tableView.reloadData()
-           }
-       }
-    
+    var sortOption: SortOption = .nameAscending
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -40,28 +35,79 @@ class CompanyMemberViewController: AbstractViewController {
     }
 
     @objc override func rightBarButtonClicked() {
-           self.isAssedingOrder.toggle()
-           addRightBarButtonWithImageAbstract(self.isAssedingOrder ? #imageLiteral(resourceName: "deassendind1") : #imageLiteral(resourceName: "assendind1"))
-       }
+        Alert.showActionsheet(viewController: self, title: "Sort", message: "Please the select Option", actions: viewModel.actionList) { (index) in
+            print("call action \(index)")
+            self.filter(for: self.viewModel.actionList[index].0)
+            self.tableView.reloadData()
+        }
+        
+    }
     
-    func sortByOrder(order isAssending : Bool) {
+    func sortNameByOrder(order isAssending : Bool) {
         
         if isAssending {           
             self.viewModel.searchedmembers = self.viewModel.memberList.sorted { first, second in
                 let firstName = first.name?.first ?? ""
                 let secondName = second.name?.first ?? ""
                 return firstName < secondName
-             }
-
+            }
+            
         } else {
-          self.viewModel.searchedmembers = self.viewModel.memberList.sorted { first, second in
-             let firstName = first.name?.first ?? ""
-             let secondName = second.name?.first ?? ""
-             return firstName > secondName
-          }
+            self.viewModel.searchedmembers = self.viewModel.memberList.sorted { first, second in
+                let firstName = first.name?.first ?? ""
+                let secondName = second.name?.first ?? ""
+                return firstName > secondName
+            }
         }
     }
     
+    func sortAgeByOrder(order isAssending : Bool) {
+        
+        
+        if isAssending {
+            self.viewModel.searchedmembers = self.viewModel.memberList.sorted { first, second in
+                let firstName = first.age ?? 0
+                let secondName = second.age ?? 0
+                return firstName < secondName
+            }
+            
+        } else {
+            self.viewModel.searchedmembers = self.viewModel.memberList.sorted { first, second in
+                let firstName = first.age ?? 0
+                let secondName = second.age ?? 0
+                return firstName > secondName
+            }
+        }
+    }
+    
+}
+
+extension CompanyMemberViewController {
+    
+    func filter(for option: SortOption) {
+        
+        self.sortOption = option
+        
+        switch option {
+            
+        case .nameAscending:
+            
+            sortNameByOrder(order: true)
+            
+        case .nameDescending:
+            
+            sortNameByOrder(order: false)
+            
+        case .ageAscending:
+            
+            sortAgeByOrder(order: true)
+            
+        case .ageDescending:
+            
+            sortAgeByOrder(order: false)
+            
+        }
+    }
 }
 
 enum AppStoryboard: String {

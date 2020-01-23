@@ -19,12 +19,9 @@ class CompanyViewController: AbstractViewController {
     //MARK:- Properties
     
     var viewModel = CompanyViewModel()
-    var isAssedingOrder: Bool = false {
-        didSet {
-            sortByOrder(order: isAssedingOrder)
-            self.tableView.reloadData()
-        }
-    }
+    var sortOption: SortOption = .nameAscending
+    
+    var isAssedingOrder: Bool = false
     
     //MARK:- View Life Cycle
     
@@ -45,14 +42,38 @@ class CompanyViewController: AbstractViewController {
     }
     
     @objc override func rightBarButtonClicked() {
-        self.isAssedingOrder.toggle()
-        addRightBarButtonWithImageAbstract(self.isAssedingOrder ? #imageLiteral(resourceName: "deassendind1") : #imageLiteral(resourceName: "assendind1"))
+        
+        Alert.showActionsheet(viewController: self, title: "Sort", message: "Please the select Option", actions: viewModel.actionList) { (index) in
+            print("call action \(index)")
+            self.filter(for: self.viewModel.actionList[index].0)
+            self.tableView.reloadData()
+        }
+        
     }
     
 }
 
 
 extension CompanyViewController {
+    
+    func filter(for option: SortOption) {
+        
+        self.sortOption = option
+        
+        switch option {
+            
+        case .nameAscending:
+            
+            sortNameByOrder(order: true)
+            
+        case .nameDescending:
+            
+            sortNameByOrder(order: false)
+            
+        case .ageAscending, .ageDescending:
+             break
+        }
+    }
     
     func loadMemberViews(using data: [Members]) {
         
@@ -63,7 +84,7 @@ extension CompanyViewController {
         self.navigationController?.pushViewController(detailView, animated: true)
     }
     
-    func sortByOrder(order isAssending : Bool) {
+    func sortNameByOrder(order isAssending : Bool) {
         
         if isAssending {
             self.viewModel.searchedCompanies = self.viewModel.companyList.sortAssendingOrder()
@@ -73,6 +94,7 @@ extension CompanyViewController {
             
         }
     }
+    
     
 }
 

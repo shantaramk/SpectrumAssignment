@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C5FB61523D74BCE000B2367 /* ActionSheetAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C5FB61423D74BCE000B2367 /* ActionSheetAlert.swift */; };
 		4C6FB44323D59AEC00DA2B11 /* CompanyMemberViewController+Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6FB44223D59AEC00DA2B11 /* CompanyMemberViewController+Delegate.swift */; };
 		4C6FB44523D59B3200DA2B11 /* MemberViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6FB44423D59B3200DA2B11 /* MemberViewModel.swift */; };
 		4C6FB44723D59BC000DA2B11 /* CompanyMemberViewController+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6FB44623D59BC000DA2B11 /* CompanyMemberViewController+UI.swift */; };
@@ -44,6 +45,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4C5FB61423D74BCE000B2367 /* ActionSheetAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionSheetAlert.swift; sourceTree = "<group>"; };
 		4C6FB44223D59AEC00DA2B11 /* CompanyMemberViewController+Delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CompanyMemberViewController+Delegate.swift"; sourceTree = "<group>"; };
 		4C6FB44423D59B3200DA2B11 /* MemberViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberViewModel.swift; sourceTree = "<group>"; };
 		4C6FB44623D59BC000DA2B11 /* CompanyMemberViewController+UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CompanyMemberViewController+UI.swift"; sourceTree = "<group>"; };
@@ -160,6 +162,7 @@
 			isa = PBXGroup;
 			children = (
 				4CE85D5F23C8875F00B54EA7 /* ImageCache.swift */,
+				4C5FB61423D74BCE000B2367 /* ActionSheetAlert.swift */,
 			);
 			path = SKSupport;
 			sourceTree = "<group>";
@@ -299,6 +302,7 @@
 				4CE85D6423C88D5A00B54EA7 /* CompanyMemberViewController.swift in Sources */,
 				4CA3B6DA23729A6E00569B57 /* CompanyModel.swift in Sources */,
 				4CA3B6C12372981000569B57 /* CompanyViewController.swift in Sources */,
+				4C5FB61523D74BCE000B2367 /* ActionSheetAlert.swift in Sources */,
 				4C6FB44723D59BC000DA2B11 /* CompanyMemberViewController+UI.swift in Sources */,
 				4CE85D5823C8810500B54EA7 /* CompanyViewModel.swift in Sources */,
 				4C6FB44A23D5AE3E00DA2B11 /* MemberCell.swift in Sources */,
